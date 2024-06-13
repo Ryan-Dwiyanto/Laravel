@@ -1,0 +1,251 @@
+body {
+    font-family: 'Quicksand', sans-serif ;
+    margin: 0;
+    padding: 0;
+    background-image: var(--gradiasi);
+}
+header {
+    background: rgb(255, 216, 43);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 10px;
+    padding: 10px 40px;
+}
+.navbar1 li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar1 li:active {
+    transform: scale(0.8);
+}
+
+.navbar1 li > a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.navbar1 li > a:hover {
+    background-color: #ffffff2d;
+    border-radius: 10px;
+    transition: .5s ease-out;
+}
+
+.navbar1 li > a:active {
+    background-color: rgba(255, 247, 0, 0.334);
+    border-radius: 10px;
+}
+:root {
+    --gradiasi : linear-gradient(102.4deg, rgba(254, 2, 2, 0.8) 7.8%, rgba(255, 68, 0, 0.8) 50.8%,
+    rgba(255, 106, 7, 0.8) 100.3%)
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+#Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 0px 100px 0px;
+    font-size:x-large;
+}
+
+.fa-laptop-code {
+    margin-right: 40px;
+}
+
+.img-profile {
+    border-radius: 15px 50px 30px;
+    width: 300px;
+    margin-right: 40px;
+} 
+
+#About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0px 150px 0px;
+    font-size: larger;
+}
+
+#Contact {
+    width:100%;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#Contact > .h2-f, .p1-f {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+
+.p1-f {
+    text-align: left;
+    display: flex;
+}
+
+#Contact > .p-f {
+    text-align: center;
+}
+.about-main, .about-paragraf{
+    display: flex;
+}
+
+.about-paragraf1{
+    margin-right: 40px;
+}
+
+
+@media screen and (max-width: 730px){
+    .img-profile {
+        border-radius: 20px;
+    }
+    .img-profile{
+        margin-right: 0;
+        text-align: center;
+    }
+    header {
+        border-radius:0px ;
+    }
+    .about-main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-paragraf{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .fa-laptop-code {
+        margin-right: 0px;
+    }
+    .paragraf {
+        text-align: center;
+    }
+    #Home {
+        flex-direction: column;
+    }
+    .navbar1 {
+        display: none;
+    }
+    .about-paragraf{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-paragraf1{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .navbar, .sidebar{
+        display: none;
+    }
+}
+.navbar .toggler-navbar {
+    padding: 100px;
+}
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background: rgb(255, 216, 43);
+    text-align: right;
+    font-size: 20px;
+    transform: rotate3d(0, 1, 0, 90deg);
+    transform-origin: left center;
+    transition: .5s;
+}
+
+.sidebar.open {
+    transform: rotate3d(0, 0, 1, 0deg);
+}
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar li:hover{
+    background: #ffffff2d;
+}
+
+.sidebar li:active{
+    background: rgba(255, 247, 0, 0.334);
+}
+
+.sidebar li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block
+}
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: rgb(13, 13, 13);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+    top: 2.5px;
+}
+
+.hamburger-menu span:nth-child(2) {
+    top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+    top: 21px;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+    top: 15px;
+    transform: rotate(135deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    top: 14px;
+    transform: rotate(-135deg);
+}
+
